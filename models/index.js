@@ -19,14 +19,18 @@ Category.hasMany(Product, {
   onDelete: 'CASCADE',
 });
 
-// Products belongToMany Tags (through ProductTag) --- define assoc. that products can belong to multiple productTags ---links product.js to productsTag.js
-Product.belongsToMany(ProductTag, {
+// Products belongToMany Tags (through ProductTag) 
+Product.belongsToMany(Tag, {
+  as: 'Tags',
+  through: ProductTag,
   foreignKey: 'product_id',
   onDelete: 'CASCADE',
 });
 
-// Tags belongToMany Products (through ProductTag) --- define assoc. that tags can belong to many products --- links tags.js to productTag.js
-Tag.belongsToMany(ProductTag, {
+// Tags belongToMany Products (through ProductTag) 
+Tag.belongsToMany(Product, {
+  as: 'Product',
+  through: ProductTag,
   foreignKey: 'tag_id',
   onDelete: 'CASCADE',
 });
