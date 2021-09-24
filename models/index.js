@@ -10,6 +10,7 @@ Product.belongsTo(Category, {
 
   //delete the association when a product is deleted
   onDelete: 'CASCADE',
+  onUpdate:'CASCADE',
 
 });
 
@@ -17,6 +18,7 @@ Product.belongsTo(Category, {
 Category.hasMany(Product, {
   foreignKey: 'category_id',
   onDelete: 'CASCADE',
+  onUpdate:'CASCADE',
 });
 
 // Products belongToMany Tags (through ProductTag) 
@@ -25,6 +27,7 @@ Product.belongsToMany(Tag, {
   through: ProductTag,
   foreignKey: 'product_id',
   onDelete: 'CASCADE',
+  onUpdate:'CASCADE',
 });
 
 // Tags belongToMany Products (through ProductTag) 
@@ -33,6 +36,7 @@ Tag.belongsToMany(Product, {
   through: ProductTag,
   foreignKey: 'tag_id',
   onDelete: 'CASCADE',
+  onUpdate:'CASCADE',
 });
 
 
