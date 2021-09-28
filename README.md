@@ -1,19 +1,32 @@
 # eCommerceBackEnd
+
+## Description
+Simple and easy to use e-commerce back end. This application utilizes Node.js, Express, MySQL, and Sequelize to power it's functionality. The application allows a user to GET, POST, PUT and DELETE via API routes to the database for the following tables: Products, Categories and Tags.
+
+## Installation 
+Clone repo to your local machine to begin installation. In termanial find clone repo folder and install dependencies with the code below: 
 ```
-AS A manager at an internet retail company
-I WANT a back end for my e-commerce website that uses the latest technologies
-SO THAT my company can compete with other e-commerce companies
+npm i
 ```
+
+## Usage
+Once installed and database created and seeded in the command line enter:
 ```
-GIVEN a functional Express.js API
-WHEN I add my database name, MySQL username, and MySQL password to an environment variable file
-THEN I am able to connect to a database using Sequelize
-WHEN I enter schema and seed commands
-THEN a development database is created and is seeded with test data
-WHEN I enter the command to invoke the application
-THEN my server is started and the Sequelize models are synced to the MySQL database
-WHEN I open API GET routes in Insomnia Core for categories, products, or tags
-THEN the data for each of these routes is displayed in a formatted JSON
-WHEN I test API POST, PUT, and DELETE routes in Insomnia Core
-THEN I am able to successfully create, update, and delete data in my database
+npm start
 ```
+Selection Menu will be displayed for User to make their choice from the list of options of viewing, adding or updating the company employee database.
+
+Below is an animation of how the application functions
+
+![screen-gif](./assets/demo.gif)
+
+
+
+
+For a video tutorial use this [link](https://youtu.be/2PRolV6HDaY)
+
+## License
+This application has a MIT license
+```
+
+
